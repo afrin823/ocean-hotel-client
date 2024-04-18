@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Beach Resort",
+      "segment_name": "Resort",
+      "description": "Experience the ultimate luxury at our beach resort with stunning ocean views.",
+      "price": "$500 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/T4Jk6hk/Park-Hotel-Group-Explore-Grand-Park-City-Hall-Facade.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Downtown Boutique Hotel",
+      "segment_name": "Boutique",
+      "description": "Charming boutique hotel in the heart of downtown, perfect for a romantic getaway.",
+      "price": "$300 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/mNBRvzt/9f14737c-2be7-4b2f-80ed-d9c36556e7dd.webp"
+    },
+    {
+      "id": 3,
+      "estate_title": "Mountain Lodge Retreat",
+      "segment_name": "Lodge",
+      "description": "Escape to our cozy mountain lodge surrounded by nature's beauty and tranquility.",
+      "price": "$400 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/n6ZNm3b/hotel-exterior.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Urban Chic Hotel",
+      "segment_name": "Chic",
+      "description": "Experience urban luxury at our chic hotel with modern amenities and stylish design.",
+      "price": "$250 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/PCGfVcG/Virgin-Hotels-Dallas-The-Know-Email-1742x1080-copy.png"
+    },
+    {
+      "id": 5,
+      "estate_title": "Seaside Resort Villas",
+      "segment_name": "Villas",
+      "description": "Indulge in the ultimate seaside luxury with our exclusive resort villas.",
+      "price": "$700 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/tPMkwKS/Bellagio-Hotel-Casino-Las-Vegas.webp"
+    },
+    {
+      "id": 6,
+      "estate_title": "Historic Inn & Spa",
+      "segment_name": "Inn",
+      "description": "Step back in time at our historic inn and spa, offering a blend of charm and relaxation.",
+      "price": "$350 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/5R83my3/istockphoto-119926339-612x612.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Riverside Retreat",
+      "segment_name": "Retreat",
+      "description": "Find peace and serenity at our riverside retreat, perfect for nature lovers.",
+      "price": "$300 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/WtLWy5h/istockphoto-104731717-612x612.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Family-Friendly Resort",
+      "segment_name": "Family",
+      "description": "Create unforgettable memories at our family-friendly resort with activities for all ages.",
+      "price": "$400 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/9Wr0X2k/Park-Hotel-Group-Our-Brands-Grand-Park.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Ski Chalet Retreat",
+      "segment_name": "Chalet",
+      "description": "Experience the thrill of skiing and cozy evenings at our ski chalet retreat.",
+      "price": "$600 per night",
+      "status": "rent",
+      "images": "https://i.ibb.co/XCL0psN/Park-Hotel-Group-Explore-Grand-Park-Kunming-Facade.jpg"
+    }
+  ]
+  

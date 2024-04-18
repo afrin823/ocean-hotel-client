@@ -1,5 +1,7 @@
 // import { NavLink } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
 
     
@@ -7,6 +9,7 @@ const Navbar = () => {
             <li className="text-xl"><a>Home</a></li>
             <li className="text-xl"><a>Blog</a></li>
             <li className="text-xl"><a>Contact Us</a></li>
+            <li className="text-xl"><a>Login</a></li>
            {/* <li className="text-[#4cd137] text-xl "><NavLink to="/" className="text-[#4cd137] text-xl">Home</NavLink></li>
            <li><NavLink to="/">Blog</NavLink></li>
            <li className="text-[#000] text-xl gap-2"><NavLink to="/">Services</NavLink></li>
@@ -32,7 +35,19 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-[#f6b93b] text-2xl text-white" >Log In</a>
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+             
+                 <div className="w-10 rounded-full">
+                 <Link to={`/Login`}>
+                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> 
+                </Link>               
+              </div>
+            
+            </div>
+          <Link>
+          <button className="btn bg-[#f6b93b] text-2xl text-white" >Log In</button>
+          </Link>
+          
         </div>
       </div>
     );

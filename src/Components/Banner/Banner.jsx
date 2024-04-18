@@ -1,8 +1,12 @@
+ 
+
+
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 
 const Banner = () => {
     return (
+        <div>
            <div>
                         <div className="carousel w-full">
             <div id="item1" className="carousel-item w-full">
@@ -30,7 +34,7 @@ const Banner = () => {
                     <h1 className="text-5xl font-bold mb-6">The hotel has a modern <br /> feel and relaxing </h1>
                     <p>Hotel Description. Hotel Property Descriptions supplies additional information about a hotel property or chain, based on keyword requests, that can be used ...</p>
                 
-                    <button className="btn w-48 bg-[#f6b93b] text-white mt-4 text-lg">Visit Now</button>
+                    <button className="btn w-48 bg-[#f6b93b] text-white mt-4 text-lg">Visit Now <FaLongArrowAltRight /></button>
                 
                 </div>
                 <div className="col-span-1">
@@ -48,7 +52,7 @@ const Banner = () => {
                     <h1 className="text-5xl font-bold mb-6">The hotel has a modern <br /> feel and relaxing </h1>
                     <p>Hotel Description. Hotel Property Descriptions supplies additional information about a hotel property or chain, based on keyword requests, that can be used ...</p>
                 
-                    <button className="btn w-48 bg-[#f6b93b] text-white mt-4 text-lg">Visit Now</button>
+                    <button className="btn w-48 bg-[#f6b93b] text-white mt-4 text-lg">Visit Now <FaLongArrowAltRight /></button>
                 
                 </div>
                 <div className="col-span-1">
@@ -64,7 +68,7 @@ const Banner = () => {
                     <h1 className="text-5xl font-bold mb-6">The hotel has a modern <br /> feel and relaxing </h1>
                     <p>Hotel Description. Hotel Property Descriptions supplies additional information about a hotel property or chain, based on keyword requests, that can be used ...</p>
                 
-                    <button className="btn w-48 bg-[#f6b93b] text-white mt-4 text-lg">Visit Now</button>
+                    <button className="btn w-48 bg-[#f6b93b] text-white mt-4 text-lg">Visit Now <FaLongArrowAltRight /></button>
                 
                 </div>
                 <div className="col-span-1">
@@ -81,6 +85,7 @@ const Banner = () => {
             <a href="#item4" className="btn btn-xs">4</a>
             </div>
            </div>
+        </div>
     );
 };
 
