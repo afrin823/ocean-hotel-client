@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { RiHotelLine } from "react-icons/ri";
 
 
@@ -16,7 +15,6 @@ const AllHotel = () => {
         <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {hotels.map(hotel => (
                 <div key={hotel.id} className="card w-96 mx-auto shadow-xl">
-                    <Link to={`/hotel/${hotel.id}`}>
                         <figure>
                             <img className="w-full h-64" src={hotel.images} alt="" />
                         </figure>
@@ -44,7 +42,6 @@ const AllHotel = () => {
                                 </div>
                             </div>
                         </div>
-                    </Link>
                 </div>
             ))}
         </div>
