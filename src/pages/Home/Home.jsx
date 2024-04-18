@@ -1,14 +1,15 @@
 import Banner from "../../Components/Bnner/Banner";
+import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
 
 const Home = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h2 className="text-2xl">Home page</h2>
             <div>
                 <Banner></Banner>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
