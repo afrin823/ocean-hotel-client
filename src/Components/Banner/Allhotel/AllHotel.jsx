@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { RiHotelLine } from "react-icons/ri";
+
 
 const AllHotel = () => {
     const [hotels, setHotels] = useState([]);
@@ -20,8 +22,9 @@ const AllHotel = () => {
                         </figure>
                         <div className="">
                             <div className="card-body">
+                            <h3 className="text-[#f6b93b] text-xl font-bold">{hotel.segment_name}</h3>
                                 <div className="card-actions gap-4">
-                                    <h3>{hotel.segment_name}</h3>
+                                
                                     <div className="text-xl font-medium ">
                                         {hotel.estate_title}
                                     </div>
@@ -36,7 +39,7 @@ const AllHotel = () => {
                                 <hr className="border-dashed border-w-[4px]" />
                                 <p className="text-[gray]">{hotel.description}</p>
                                 <div className="card-actions justify-between">
-                                    <div>{hotel.estate_title}</div>
+                                    <div className="flex justify-center	items-center	gap-2"><RiHotelLine className="text-2xl text-[#f6b93b]" />  <span className="text-[#f6b93b] text-xl font-bold">{hotel.id}</span></div>
                                     {/* Add other content or actions here */}
                                 </div>
                             </div>

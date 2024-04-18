@@ -6,9 +6,9 @@ const Navbar = () => {
 
     
     const links = <>
-            <li className="text-xl"><a>Home</a></li>
-            <li className="text-xl"><a>Blog</a></li>
-            <li className="text-xl"><a>Contact Us</a></li>
+            <li className="text-xl"><a href="/">Home</a></li>
+            <li className="text-xl"><a href="/Blog">Blog</a></li>
+            <li className="text-xl"><a href="/ContactUs">Contact Us</a></li>
             <li className="text-xl"><a>Login</a></li>
            {/* <li className="text-[#4cd137] text-xl "><NavLink to="/" className="text-[#4cd137] text-xl">Home</NavLink></li>
            <li><NavLink to="/">Blog</NavLink></li>
