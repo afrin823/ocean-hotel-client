@@ -6,6 +6,8 @@ const Contact = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <div className="w-full bg-base-200 p-8 mb-8 mt-2 rounded">
+                
             <div className="hero w-4/5 mx-auto min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
@@ -36,6 +38,7 @@ const Contact = () => {
     </div>
   </div>
 </div>
+            </div>
             <Footer></Footer>
         </div>
     );
