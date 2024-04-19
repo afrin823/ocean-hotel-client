@@ -8,7 +8,7 @@ import Register from "../pages/Home/Register/Register";
 
 
 
-const router = createBrowserRouter([
+const Routes = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
@@ -38,4 +38,4 @@ const router = createBrowserRouter([
     }
 ])
 
-export default router;
+export default Routes;
