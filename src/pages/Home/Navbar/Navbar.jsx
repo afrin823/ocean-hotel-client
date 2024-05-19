@@ -1,19 +1,15 @@
-// import { NavLink } from "react-router-dom";
-
 import { Link } from "react-router-dom";
+import useAuth from "../../../firebase/hook/useAuth";
 
 const Navbar = () => {
-
+  const {logOut, user} = useAuth();
+  console.log(user)
     
-    const links = <>
+            const links = <>
             <li className="text-xl"><a href="/">Home</a></li>
             <li className="text-xl"><a href="/Blog">Blog</a></li>
             <li className="text-xl"><a href="/ContactUs">Contact Us</a></li>
-            <li className="text-xl"><a href="/Login">Login</a></li>
-           {/* <li className="text-[#4cd137] text-xl "><NavLink to="/" className="text-[#4cd137] text-xl">Home</NavLink></li>
-           <li><NavLink to="/">Blog</NavLink></li>
-           <li className="text-[#000] text-xl gap-2"><NavLink to="/">Services</NavLink></li>
-           <li className="text-[#fff] text-xl"><NavLink to="/">Contact Us</NavLink></li> */}
+       
     </>
 
     return (
@@ -35,20 +31,27 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-             
-                 <div className="w-10 rounded-full">
-                 <Link to={`/Login`}>
-                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> 
-                </Link>               
+              {
+                user? <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-24 rounded-full">
+                 <img src={user?.photoURL || "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}   />
+                  </div>
+                </label>
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <button className="btn btn-sm btn-ghost">{user?.displayName || "user name not found"}</button>
+                </li>
+                <li>
+                  <button onClick={logOut}
+                  className="btn btn-warning text-white">logout</button>
+                </li>
+                </ul>
               </div>
-            
+              :
+              <Link to={'/Login'}><button className="btn btn-warning text-white">LogIn</button></Link>
+              };            
             </div>
-          <Link to="/Login">
-          <button className="btn bg-[#f6b93b] text-2xl text-white" >Log In</button>
-          </Link>
-          
-        </div>
       </div>
     );
 };

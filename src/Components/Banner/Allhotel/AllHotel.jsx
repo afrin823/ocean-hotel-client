@@ -6,7 +6,7 @@ const AllHotel = () => {
     const [hotels, setHotels] = useState([]);
 
     useEffect(() => {
-        fetch('/hotel.json') 
+        fetch('hotel.json') 
             .then(res => res.json())
             .then(data => setHotels(data))
     }, []);

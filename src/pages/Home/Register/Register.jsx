@@ -1,71 +1,85 @@
-import { Link } from "react-router-dom";
+import { Link,  useLocation, useNavigate,   } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import useAuth from "../../../firebase/hook/useAuth";
 
 
 
 const Register = () => {
+    const {createUser, updateUserProfile} = useAuth();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
-    
-    
-    const handelRegister = e => {
-        e.preventDefault();
-        console.log(e.currentTarget); 
-        const form = new FormData(e.currentTarget);
-        const name = form.get('name');
-        const email = form.get('email');
-        const photo = form.get('photo');
-        const password = form.get('password');
-        console.log(name, photo, email, password);
-    }
 
-    //create user
+    const navigate = useNavigate();
+    const location = useLocation();
+    const form = location?.state || '/';
 
+      const onSubmit = data => {
+        const {email, password, image, name}= data;
+        createUser(email,password).then(() => {
+            updateUserProfile(name, image).then(() => {
+                    navigate(form);              
+            });          
+        });
+      };
 
     return (
         <div>
-        <Navbar></Navbar>
-        <div>
+            <Navbar></Navbar>
+            <div className="w-96 mx-auto my-4">
+            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <form  onSubmit={handleSubmit(onSubmit)} className="card-body">
             <h2 className="text-3xl text-center">Please Register</h2>
-            <form onSubmit={handelRegister} className="md:w-3/4 lg:w-1/2 mx-auto">
             <div className="form-control">
             <label className="label">
                 <span className="label-text">Name</span>
             </label>
-            <input type="text" placeholder="Enter your Name" name="name" className="input input-bordered" required />
+            <input type="text" placeholder="Enter your Name" name="name" className="input input-bordered" 
+            {...register("Name", { required: true })}
+            />
+             {errors.Name && <span className="text-red-500">This field is required</span>}
             </div>
             <div className="form-control">
             <label className="label">
                 <span className="label-text">Email</span>
             </label>
-            <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+            <input type="email" placeholder="email" name="email" className="input input-bordered" 
+            {...register("email", { required: true })}
+            />
+             {errors.email && <span className="text-red-500">This field is required</span>}
             </div>
             <div className="form-control">
             <label className="label">
                 <span className="label-text">Photo URL</span>
             </label>
-            <input type="text" placeholder="Photo url" name="photo" className="input input-bordered" required />
+            <input type="text" placeholder="Photo url" name="photo" className="input input-bordered" 
+            {...register("image")}
+            />
             </div>
-           
             <div className="form-control">
             <label className="label">
                 <span className="label-text">Password</span>
             </label>
-            <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-            <label className="label">
-                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-            </label>
+            <input type="password" placeholder="password" name="password" className="input input-bordered"  
+            {...register("password", { required: true })}
+            /> 
+            {errors.password && <span className="text-red-500">This field is required</span>}          
             </div>
-            <div className="form-control mt-6">
-            <button className="btn btn-primary">Register</button>
+            <div className="form-control mt-2">
+            <button className="btn btn-warning text-xl text-white">Register</button>
+            </div>  
+            <div className="justify-between flex items-center">
+            <p className="my-3">Already have an Account?</p> 
+            <Link className="text-[blue] font-bold" to="/Login"> Please Log In</Link>
             </div>
-            </form>
-            <p className="text-center mt-4">Already have an Account? <Link className="text-[blue] font-bold" to="/Login">Log In</Link></p>
-        </div><br />
-
-
-            <Footer></Footer>
+                    
+      </form>
+   
     </div>
+        </div>
+       <Footer></Footer>
+        </div>
     );
 };
 

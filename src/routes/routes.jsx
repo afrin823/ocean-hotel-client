@@ -5,6 +5,8 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
 import Register from "../pages/Home/Register/Register";
+import SocialLogIn from "../Components/Banner/SocialLogIn/SocialLogIn";
+import Notfound from "../pages/Home/Navbar/Notfound/Notfound";
 
 
 
@@ -12,6 +14,7 @@ const Routes = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <Notfound></Notfound>,
         children: [
             {
                 path: '/',
@@ -30,8 +33,15 @@ const Routes = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path: '/Register',
+                path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: 'socialLogin',
+                element: <SocialLogIn></SocialLogIn>
+            },
+            {
+
             }
 
         ]
