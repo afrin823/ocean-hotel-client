@@ -4,12 +4,19 @@ import Login from "../Components/Banner/Login/Login";
 import Root from "../layouts/Root";
 import Home from "../pages/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
+<<<<<<< HEAD
 import Register from "../pages/Home/Register/Register";
 import SocialLogIn from "../Components/Banner/SocialLogIn/SocialLogIn";
 import Notfound from "../pages/Home/Navbar/Notfound/Notfound";
 
 
 
+=======
+
+
+
+
+>>>>>>> 7bc03851dc84a1acb3e02b5b81cdba971adf6302
 const Routes = createBrowserRouter([
     {
         path: '/',
@@ -32,6 +39,7 @@ const Routes = createBrowserRouter([
                 path: '/Login',
                 element: <Login></Login>
             },
+<<<<<<< HEAD
             {
                 path: '/register',
                 element: <Register></Register>
@@ -43,6 +51,9 @@ const Routes = createBrowserRouter([
             {
 
             }
+=======
+         
+>>>>>>> 7bc03851dc84a1acb3e02b5b81cdba971adf6302
 
         ]
     }
